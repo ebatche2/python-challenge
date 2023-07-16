@@ -47,3 +47,13 @@ print(f"Total: ${net_profit_loss}")
 print(f"Average Change: ${average_change: .2f}")
 print(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})")
 print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
+
+outputpath = "output.txt"
+with open(outputpath, "w") as textfile:
+    textfile.write("Financial Analysis\n")
+    textfile.write("----------------------------\n")
+    textfile.write(f"Total Months: {total_months}\n")
+    textfile.write(f"Total: ${net_profit_loss}\n")
+    textfile.write(f"Average Change: ${average_change: .2f}\n")
+    textfile.write(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n")
+    textfile.write(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
